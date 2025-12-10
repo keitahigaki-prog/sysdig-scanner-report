@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Test data
+test-data/*
+!test-data/README.md
+
+# Logs (optional - remove if you want to commit logs)
+# docs/logs/*.log

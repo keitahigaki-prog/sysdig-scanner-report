@@ -1,0 +1,71 @@
+2025-12-10T13:59:46+09:00	DEBUG	No plugins loaded
+2025-12-10T13:59:46+09:00	DEBUG	Default config file "file_path=trivy.yaml" not found, using built in values
+2025-12-10T13:59:46+09:00	DEBUG	Cache dir	dir="/Users/keita.higaki/Library/Caches/trivy"
+2025-12-10T13:59:46+09:00	DEBUG	Cache dir	dir="/Users/keita.higaki/Library/Caches/trivy"
+2025-12-10T13:59:46+09:00	DEBUG	Parsed severities	severities=[UNKNOWN LOW MEDIUM HIGH CRITICAL]
+2025-12-10T13:59:46+09:00	DEBUG	Ignore statuses	statuses=[]
+2025-12-10T13:59:46+09:00	DEBUG	[vulndb] There is no db file
+2025-12-10T13:59:46+09:00	DEBUG	[vulndb] There is no valid metadata file	err.message="file open error" err.err="file open error: open /Users/keita.higaki/Library/Caches/trivy/db/metadata.json: no such file or directory" err.time=2025-12-10T04:59:46.264256Z err.trace="01KC3A2CPR0CRGCBT735A08M89" err.context.file_path="/Users/keita.higaki/Library/Caches/trivy/db/metadata.json" err.stacktrace="Oops: file open error\n  --- at /home/runner/go/pkg/mod/github.com/aquasecurity/trivy-db@v0.0.0-20250929072116-eba1ced2340a/pkg/metadata/metadata.go:43 Client.Get()\n  --- at /home/runner/work/trivy/trivy/pkg/db/db.go:111 Client.NeedsUpdate()\n  --- at /home/runner/work/trivy/trivy/pkg/commands/operation/operation.go:33 DownloadDB()\n  --- at /home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:333 runner.initDB()\n  --- at /home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:142 NewRunner()\n  --- at /home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:422 run()\n  --- at /home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:405 Run()\n  --- at /home/runner/work/trivy/trivy/pkg/commands/app.go:378 NewFilesystemCommand.func2()\n  --- at /home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.1/command.go:1015 Command.execute()\n  --- at /home/runner/go/pkg/mod/github.com/spf13/cobra@v1.10.1/command.go:1148 Command.ExecuteC()"
+2025-12-10T13:59:46+09:00	INFO	[vulndb] Need to update DB
+2025-12-10T13:59:46+09:00	INFO	[vulndb] Downloading vulnerability DB...
+2025-12-10T13:59:46+09:00	INFO	[vulndb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2025-12-10T13:59:47+09:00	DEBUG	Created process-specific temp directory	path="/var/folders/qj/dwx0238x7v74bd1k5d8j7wtc0000gp/T/trivy-40938"
+607.22 KiB / 77.40 MiB [>____________________________________________________________] 0.77% ? p/s ?3.67 MiB / 77.40 MiB [-->____________________________________________________________] 4.74% ? p/s ?10.79 MiB / 77.40 MiB [-------->____________________________________________________] 13.95% ? p/s ?18.86 MiB / 77.40 MiB [----------->____________________________________] 24.37% 30.44 MiB p/s ETA 1s28.58 MiB / 77.40 MiB [----------------->______________________________] 36.92% 30.44 MiB p/s ETA 1s36.38 MiB / 77.40 MiB [---------------------->_________________________] 47.00% 30.44 MiB p/s ETA 1s44.10 MiB / 77.40 MiB [--------------------------->____________________] 56.98% 31.19 MiB p/s ETA 1s51.79 MiB / 77.40 MiB [-------------------------------->_______________] 66.91% 31.19 MiB p/s ETA 0s59.26 MiB / 77.40 MiB [------------------------------------>___________] 76.56% 31.19 MiB p/s ETA 0s65.01 MiB / 77.40 MiB [---------------------------------------->_______] 83.99% 31.43 MiB p/s ETA 0s72.66 MiB / 77.40 MiB [--------------------------------------------->__] 93.87% 31.43 MiB p/s ETA 0s77.40 MiB / 77.40 MiB [---------------------------------------------->] 100.00% 31.43 MiB p/s ETA 0s77.40 MiB / 77.40 MiB [---------------------------------------------->] 100.00% 30.73 MiB p/s ETA 0s77.40 MiB / 77.40 MiB [---------------------------------------------->] 100.00% 30.73 MiB p/s ETA 0s77.40 MiB / 77.40 MiB [---------------------------------------------->] 100.00% 30.73 MiB p/s ETA 0s77.40 MiB / 77.40 MiB [---------------------------------------------->] 100.00% 28.75 MiB p/s ETA 0s77.40 MiB / 77.40 MiB [---------------------------------------------->] 100.00% 28.75 MiB p/s ETA 0s77.40 MiB / 77.40 MiB [---------------------------------------------->] 100.00% 28.75 MiB p/s ETA 0s77.40 MiB / 77.40 MiB [-------------------------------------------------] 100.00% 22.68 MiB p/s 3.6s2025-12-10T13:59:51+09:00	INFO	[vulndb] Artifact successfully downloaded	repo="mirror.gcr.io/aquasec/trivy-db:2"
+2025-12-10T13:59:51+09:00	DEBUG	Updating database metadata...
+2025-12-10T13:59:51+09:00	DEBUG	DB info	schema=2 updated_at=2025-12-10T00:28:02.128218939Z next_update=2025-12-11T00:28:02.128218576Z downloaded_at=2025-12-10T04:59:51.510173Z
+2025-12-10T13:59:51+09:00	DEBUG	[pkg] Package types	types=[os library]
+2025-12-10T13:59:51+09:00	DEBUG	[pkg] Package relationships	relationships=[unknown root workspace direct indirect]
+2025-12-10T13:59:51+09:00	INFO	[vuln] Vulnerability scanning is enabled
+2025-12-10T13:59:51+09:00	INFO	[secret] Secret scanning is enabled
+2025-12-10T13:59:51+09:00	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+2025-12-10T13:59:51+09:00	INFO	[secret] Please see https://trivy.dev/docs/v0.68/guide/scanner/secret#recommendation for faster secret detection
+2025-12-10T13:59:51+09:00	DEBUG	[notification] Running version check
+2025-12-10T13:59:51+09:00	DEBUG	Initializing scan cache...	type="memory"
+2025-12-10T13:59:51+09:00	DEBUG	[secret] No secret config detected	config_path="trivy-secret.yaml"
+2025-12-10T13:59:51+09:00	DEBUG	[fs] Analyzing...	root="."
+2025-12-10T13:59:51+09:00	DEBUG	[secret] Using streaming scanner	file_path="many-files/file_.txt"
+2025-12-10T13:59:51+09:00	DEBUG	[secret] scanStream called	file_path="many-files/file_.txt" buffer_size=65536 overlap_size=4096
+2025-12-10T13:59:51+09:00	DEBUG	[secret] scanChunk called	file_path="many-files/file_.txt" content_len=14 num_rules=87
+2025-12-10T13:59:51+09:00	DEBUG	[secret] Using streaming scanner	file_path="package.json"
+2025-12-10T13:59:51+09:00	DEBUG	[secret] scanStream called	file_path="package.json" buffer_size=65536 overlap_size=4096
+2025-12-10T13:59:51+09:00	DEBUG	[secret] scanChunk called	file_path="package.json" content_len=45 num_rules=87
+2025-12-10T13:59:51+09:00	DEBUG	[secret] scanChunk called	file_path="many-files/file_.txt" content_len=14 num_rules=87
+2025-12-10T13:59:51+09:00	DEBUG	[secret] scanChunk called	file_path="package.json" content_len=45 num_rules=87
+2025-12-10T13:59:51+09:00	DEBUG	OS is not detected.
+2025-12-10T13:59:51+09:00	DEBUG	Detected OS: unknown
+2025-12-10T13:59:51+09:00	INFO	Number of language-specific files	num=0
+2025-12-10T13:59:51+09:00	DEBUG	Specified ignore file does not exist	file=".trivyignore"
+2025-12-10T13:59:51+09:00	DEBUG	[vex] VEX filtering is disabled
+2025-12-10T13:59:51+09:00	WARN	[report] Supported files for scanner(s) not found.	scanners=[vuln]
+2025-12-10T13:59:51+09:00	INFO	[report] No issues detected with scanner(s).	scanners=[secret]
+
+Report Summary
+
+┌────────┬──────┬─────────────────┬─────────┐
+│ Target │ Type │ Vulnerabilities │ Secrets │
+├────────┼──────┼─────────────────┼─────────┤
+│   -    │  -   │        -        │    -    │
+└────────┴──────┴─────────────────┴─────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+2025-12-10T13:59:51+09:00	DEBUG	Cleaning up temp directory	path="/var/folders/qj/dwx0238x7v74bd1k5d8j7wtc0000gp/T/trivy-40938"
+        5.29 real         1.21 user         0.40 sys
+           104579072  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               12859  page reclaims
+                 252  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                2872  messages sent
+                4369  messages received
+                 197  signals received
+                 199  voluntary context switches
+               17745  involuntary context switches
+         17347703611  instructions retired
+          5959735044  cycles elapsed
+            52249416  peak memory footprint
