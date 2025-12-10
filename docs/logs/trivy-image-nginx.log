@@ -1,0 +1,64 @@
+2025-12-10T14:14:39+09:00	DEBUG	No plugins loaded
+2025-12-10T14:14:39+09:00	DEBUG	Default config file "file_path=trivy.yaml" not found, using built in values
+2025-12-10T14:14:39+09:00	DEBUG	Cache dir	dir="/Users/keita.higaki/Library/Caches/trivy"
+2025-12-10T14:14:39+09:00	DEBUG	Cache dir	dir="/Users/keita.higaki/Library/Caches/trivy"
+2025-12-10T14:14:39+09:00	DEBUG	Parsed severities	severities=[UNKNOWN LOW MEDIUM HIGH CRITICAL]
+2025-12-10T14:14:39+09:00	DEBUG	Ignore statuses	statuses=[]
+2025-12-10T14:14:39+09:00	DEBUG	DB update was skipped because the local DB is the latest
+2025-12-10T14:14:39+09:00	DEBUG	DB info	schema=2 updated_at=2025-12-10T00:28:02.128218939Z next_update=2025-12-11T00:28:02.128218576Z downloaded_at=2025-12-10T04:59:51.510173Z
+2025-12-10T14:14:39+09:00	DEBUG	[pkg] Package types	types=[os library]
+2025-12-10T14:14:39+09:00	DEBUG	[pkg] Package relationships	relationships=[unknown root workspace direct indirect]
+2025-12-10T14:14:39+09:00	INFO	[vuln] Vulnerability scanning is enabled
+2025-12-10T14:14:39+09:00	INFO	[secret] Secret scanning is enabled
+2025-12-10T14:14:39+09:00	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+2025-12-10T14:14:39+09:00	DEBUG	[notification] Running version check
+2025-12-10T14:14:39+09:00	INFO	[secret] Please see https://trivy.dev/docs/v0.68/guide/scanner/secret#recommendation for faster secret detection
+2025-12-10T14:14:39+09:00	DEBUG	Initializing scan cache...	type="fs"
+2025-12-10T14:14:39+09:00	DEBUG	[notification] Version check completed	latest_version="0.68.1"
+2025-12-10T14:14:42+09:00	FATAL	Fatal error
+  - run error:
+    github.com/aquasecurity/trivy/pkg/commands/artifact.Run
+        /home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:407
+  - image scan error:
+    github.com/aquasecurity/trivy/pkg/commands/artifact.run
+        /home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:448
+  - scan error:
+    github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scanArtifact
+        /home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:300
+  - unable to initialize a scan service:
+    github.com/aquasecurity/trivy/pkg/commands/artifact.(*runner).scan
+        /home/runner/work/trivy/trivy/pkg/commands/artifact/run.go:696
+  - unable to initialize artifact:
+    github.com/aquasecurity/trivy/pkg/commands/artifact.createLocalService
+        /home/runner/work/trivy/trivy/pkg/commands/artifact/scanner.go:261
+  - unable to initialize container image:
+    github.com/aquasecurity/trivy/pkg/commands/artifact.imageStandaloneScanService.func1
+        /home/runner/work/trivy/trivy/pkg/commands/artifact/scanner.go:42
+  - unable to find the specified image "sysdig-demo-app:nginx" in ["docker" "containerd" "podman" "remote"]:
+    github.com/aquasecurity/trivy/pkg/fanal/image.NewContainerImage
+        /home/runner/work/trivy/trivy/pkg/fanal/image/image.go:61
+  - 4 errors occurred:
+	* docker error: unable to get history (index.docker.io/library/sysdig-demo-app:nginx): Error response from daemon: NotFound: snapshot sha256:8054273dadb79322c8f283c8fd1b523c130776469257d20dcc68d26a8bb0cd2a does not exist: not found
+	* containerd error: containerd socket not found: /run/containerd/containerd.sock
+	* podman error: unable to initialize Podman client: no podman socket found: stat podman/podman.sock: no such file or directory
+	* remote error: GET https://index.docker.io/v2/library/sysdig-demo-app/manifests/nginx: UNAUTHORIZED: authentication required; [map[Action:pull Class: Name:library/sysdig-demo-app Type:repository]]
+
+
+        2.58 real         0.06 user         0.08 sys
+           100843520  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               11983  page reclaims
+                 272  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                  75  messages sent
+                 147  messages received
+                 138  signals received
+                 242  voluntary context switches
+                2267  involuntary context switches
+           889330140  instructions retired
+           412208116  cycles elapsed
+            49857328  peak memory footprint

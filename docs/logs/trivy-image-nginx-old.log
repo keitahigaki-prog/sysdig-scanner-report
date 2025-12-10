@@ -1,0 +1,202 @@
+2025-12-10T14:15:50+09:00	INFO	[vuln] Vulnerability scanning is enabled
+2025-12-10T14:15:50+09:00	INFO	Detected OS	family="alpine" version="3.9.3"
+2025-12-10T14:15:50+09:00	INFO	[alpine] Detecting vulnerabilities...	os_version="3.9" repository="3.9" pkg_num=29
+2025-12-10T14:15:50+09:00	INFO	Number of language-specific files	num=0
+2025-12-10T14:15:50+09:00	WARN	This OS version is no longer supported by the distribution	family="alpine" version="3.9.3"
+2025-12-10T14:15:50+09:00	WARN	The vulnerability detection may be insufficient because security updates are not provided
+
+Report Summary
+
+┌──────────────────────────────────┬────────┬─────────────────┐
+│              Target              │  Type  │ Vulnerabilities │
+├──────────────────────────────────┼────────┼─────────────────┤
+│ nginx:1.14-alpine (alpine 3.9.3) │ alpine │       42        │
+└──────────────────────────────────┴────────┴─────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+nginx:1.14-alpine (alpine 3.9.3)
+================================
+Total: 42 (UNKNOWN: 0, LOW: 4, MEDIUM: 23, HIGH: 10, CRITICAL: 5)
+
+┌───────────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬──────────────────────────────────────────────────────────────┐
+│    Library    │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                            Title                             │
+├───────────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ freetype      │ CVE-2020-15999 │ CRITICAL │ fixed  │ 2.9.1-r2          │ 2.9.1-r3      │ freetype: Heap-based buffer overflow due to integer          │
+│               │                │          │        │                   │               │ truncation in Load_SBit_Png                                  │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2020-15999                   │
+├───────────────┼────────────────┤          │        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libbz2        │ CVE-2019-12900 │          │        │ 1.0.6-r6          │ 1.0.6-r7      │ bzip2: bzip2: Data integrity error when decompressing (with  │
+│               │                │          │        │                   │               │ data integrity tests fail)....                               │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-12900                   │
+├───────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libcrypto1.1  │ CVE-2020-1967  │ HIGH     │        │ 1.1.1b-r1         │ 1.1.1g-r0     │ openssl: Segmentation fault in SSL_check_chain causes denial │
+│               │                │          │        │                   │               │ of service                                                   │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2020-1967                    │
+│               ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2021-23840 │          │        │                   │ 1.1.1j-r0     │ openssl: integer overflow in CipherUpdate                    │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-23840                   │
+│               ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2021-3450  │          │        │                   │ 1.1.1k-r0     │ openssl: CA certificate check bypass with                    │
+│               │                │          │        │                   │               │ X509_V_FLAG_X509_STRICT                                      │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-3450                    │
+│               ├────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2019-1547  │ MEDIUM   │        │                   │ 1.1.1d-r0     │ openssl: side-channel weak encryption vulnerability          │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-1547                    │
+│               ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2019-1549  │          │        │                   │               │ openssl: information disclosure in fork()                    │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-1549                    │
+│               ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2019-1551  │          │        │                   │ 1.1.1d-r2     │ openssl: Integer overflow in RSAZ modular exponentiation on  │
+│               │                │          │        │                   │               │ x86_64                                                       │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-1551                    │
+│               ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2020-1971  │          │        │                   │ 1.1.1i-r0     │ openssl: EDIPARTYNAME NULL pointer de-reference              │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2020-1971                    │
+│               ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2021-23841 │          │        │                   │ 1.1.1j-r0     │ openssl: NULL pointer dereference in                         │
+│               │                │          │        │                   │               │ X509_issuer_and_serial_hash()                                │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-23841                   │
+│               ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2021-3449  │          │        │                   │ 1.1.1k-r0     │ openssl: NULL pointer dereference in signature_algorithms    │
+│               │                │          │        │                   │               │ processing                                                   │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-3449                    │
+│               ├────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2019-1563  │ LOW      │        │                   │ 1.1.1d-r0     │ openssl: information disclosure in PKCS7_dataDecode and      │
+│               │                │          │        │                   │               │ CMS_decrypt_set1_pkey                                        │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-1563                    │
+│               ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2021-23839 │          │        │                   │ 1.1.1j-r0     │ openssl: incorrect SSLv2 rollback protection                 │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-23839                   │
+├───────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libgcrypt     │ CVE-2019-12904 │ MEDIUM   │        │ 1.8.4-r0          │ 1.8.4-r1      │ Libgcrypt: physical addresses being available to other       │
+│               │                │          │        │                   │               │ processes leads to a flush-and-reload...                     │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-12904                   │
+│               ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2019-13627 │          │        │                   │ 1.8.5-r0      │ libgcrypt: ECDSA timing attack allowing private key leak     │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-13627                   │
+├───────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libjpeg-turbo │ CVE-2019-2201  │ HIGH     │        │ 1.5.3-r4          │ 1.5.3-r6      │ libjpeg-turbo: several integer overflows and subsequent      │
+│               │                │          │        │                   │               │ segfaults when attempting to compress/decompress             │
+│               │                │          │        │                   │               │ gigapixel...                                                 │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-2201                    │
+│               ├────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2018-14498 │ MEDIUM   │        │                   │ 1.5.3-r5      │ libjpeg-turbo: heap-based buffer over-read via crafted 8-bit │
+│               │                │          │        │                   │               │ BMP in get_8bit_row in rdbmp.c...                            │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2018-14498                   │
+├───────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libpng        │ CVE-2018-14550 │ HIGH     │        │ 1.6.35-r0         │ 1.6.37-r0     │ libpng: Stack-based buffer overflow in                       │
+│               │                │          │        │                   │               │ contrib/pngminus/pnm2png.c:get_token() potentially leading   │
+│               │                │          │        │                   │               │ to arbitrary code execution...                               │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2018-14550                   │
+│               ├────────────────┼──────────┤        │                   │               ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2018-14048 │ MEDIUM   │        │                   │               │ libpng: Segmentation fault in png.c:png_free_data function   │
+│               │                │          │        │                   │               │ causing denial of service                                    │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2018-14048                   │
+│               ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2019-7317  │          │        │                   │               │ libpng: use-after-free in png_image_free in png.c            │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-7317                    │
+├───────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libssl1.1     │ CVE-2020-1967  │ HIGH     │        │ 1.1.1b-r1         │ 1.1.1g-r0     │ openssl: Segmentation fault in SSL_check_chain causes denial │
+│               │                │          │        │                   │               │ of service                                                   │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2020-1967                    │
+│               ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2021-23840 │          │        │                   │ 1.1.1j-r0     │ openssl: integer overflow in CipherUpdate                    │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-23840                   │
+│               ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2021-3450  │          │        │                   │ 1.1.1k-r0     │ openssl: CA certificate check bypass with                    │
+│               │                │          │        │                   │               │ X509_V_FLAG_X509_STRICT                                      │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-3450                    │
+│               ├────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2019-1547  │ MEDIUM   │        │                   │ 1.1.1d-r0     │ openssl: side-channel weak encryption vulnerability          │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-1547                    │
+│               ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2019-1549  │          │        │                   │               │ openssl: information disclosure in fork()                    │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-1549                    │
+│               ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2019-1551  │          │        │                   │ 1.1.1d-r2     │ openssl: Integer overflow in RSAZ modular exponentiation on  │
+│               │                │          │        │                   │               │ x86_64                                                       │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-1551                    │
+│               ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2020-1971  │          │        │                   │ 1.1.1i-r0     │ openssl: EDIPARTYNAME NULL pointer de-reference              │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2020-1971                    │
+│               ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2021-23841 │          │        │                   │ 1.1.1j-r0     │ openssl: NULL pointer dereference in                         │
+│               │                │          │        │                   │               │ X509_issuer_and_serial_hash()                                │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-23841                   │
+│               ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2021-3449  │          │        │                   │ 1.1.1k-r0     │ openssl: NULL pointer dereference in signature_algorithms    │
+│               │                │          │        │                   │               │ processing                                                   │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-3449                    │
+│               ├────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2019-1563  │ LOW      │        │                   │ 1.1.1d-r0     │ openssl: information disclosure in PKCS7_dataDecode and      │
+│               │                │          │        │                   │               │ CMS_decrypt_set1_pkey                                        │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-1563                    │
+│               ├────────────────┤          │        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2021-23839 │          │        │                   │ 1.1.1j-r0     │ openssl: incorrect SSLv2 rollback protection                 │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2021-23839                   │
+├───────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libxml2       │ CVE-2019-19956 │ HIGH     │        │ 2.9.9-r1          │ 2.9.9-r2      │ libxml2: memory leak in xmlParseBalancedChunkMemoryRecover   │
+│               │                │          │        │                   │               │ in parser.c                                                  │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-19956                   │
+│               ├────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2020-24977 │ MEDIUM   │        │                   │ 2.9.9-r3      │ libxml2: Buffer overflow vulnerability in                    │
+│               │                │          │        │                   │               │ xmlEncodeEntitiesInternal() in entities.c                    │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2020-24977                   │
+├───────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ libxslt       │ CVE-2019-11068 │ CRITICAL │        │ 1.1.32-r0         │ 1.1.33-r1     │ libxslt: xsltCheckRead and xsltCheckWrite routines security  │
+│               │                │          │        │                   │               │ bypass by crafted URL                                        │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-11068                   │
+│               ├────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2019-18197 │ HIGH     │        │                   │ 1.1.33-r2     │ libxslt: use after free in xsltCopyText in transform.c could │
+│               │                │          │        │                   │               │ lead to information...                                       │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-18197                   │
+│               ├────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2019-13117 │ MEDIUM   │        │                   │ 1.1.33-r3     │ libxslt: an xsl number with certain format strings could     │
+│               │                │          │        │                   │               │ lead to a...                                                 │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-13117                   │
+│               ├────────────────┤          │        │                   │               ├──────────────────────────────────────────────────────────────┤
+│               │ CVE-2019-13118 │          │        │                   │               │ libxslt: read of uninitialized stack data due to too narrow  │
+│               │                │          │        │                   │               │ xsl:number instruction...                                    │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-13118                   │
+├───────────────┼────────────────┼──────────┤        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ musl          │ CVE-2019-14697 │ CRITICAL │        │ 1.1.20-r4         │ 1.1.20-r5     │ musl libc through 1.1.23 has an x87 floating-point stack     │
+│               │                │          │        │                   │               │ adjustment im ......                                         │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-14697                   │
+│               ├────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2020-28928 │ MEDIUM   │        │                   │ 1.1.20-r6     │ In musl libc through 1.2.1, wcsnrtombs mishandles particular │
+│               │                │          │        │                   │               │ combinati ...                                                │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2020-28928                   │
+├───────────────┼────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│ musl-utils    │ CVE-2019-14697 │ CRITICAL │        │                   │ 1.1.20-r5     │ musl libc through 1.1.23 has an x87 floating-point stack     │
+│               │                │          │        │                   │               │ adjustment im ......                                         │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2019-14697                   │
+│               ├────────────────┼──────────┤        │                   ├───────────────┼──────────────────────────────────────────────────────────────┤
+│               │ CVE-2020-28928 │ MEDIUM   │        │                   │ 1.1.20-r6     │ In musl libc through 1.2.1, wcsnrtombs mishandles particular │
+│               │                │          │        │                   │               │ combinati ...                                                │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2020-28928                   │
+├───────────────┼────────────────┤          │        ├───────────────────┼───────────────┼──────────────────────────────────────────────────────────────┤
+│ pcre          │ CVE-2020-14155 │          │        │ 8.42-r1           │ 8.42-r2       │ pcre: Integer overflow when parsing callout numeric          │
+│               │                │          │        │                   │               │ arguments                                                    │
+│               │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2020-14155                   │
+└───────────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴──────────────────────────────────────────────────────────────┘
+        0.34 real         0.19 user         0.05 sys
+           120815616  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                8592  page reclaims
+                  52  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                  22  messages sent
+                1310  messages received
+                 309  signals received
+                 646  voluntary context switches
+                5693  involuntary context switches
+          2655748458  instructions retired
+           933254585  cycles elapsed
+            66667288  peak memory footprint

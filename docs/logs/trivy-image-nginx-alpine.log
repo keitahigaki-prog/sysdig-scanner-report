@@ -1,0 +1,35 @@
+2025-12-10T14:15:19+09:00	INFO	[vuln] Vulnerability scanning is enabled
+2025-12-10T14:15:20+09:00	INFO	Detected OS	family="alpine" version="3.23.0"
+2025-12-10T14:15:20+09:00	WARN	This OS version is not on the EOL list	family="alpine" version="3.23"
+2025-12-10T14:15:20+09:00	INFO	[alpine] Detecting vulnerabilities...	os_version="3.23" repository="3.23" pkg_num=71
+2025-12-10T14:15:20+09:00	INFO	Number of language-specific files	num=0
+
+Report Summary
+
+┌──────────────────────────────┬────────┬─────────────────┐
+│            Target            │  Type  │ Vulnerabilities │
+├──────────────────────────────┼────────┼─────────────────┤
+│ nginx:alpine (alpine 3.23.0) │ alpine │        0        │
+└──────────────────────────────┴────────┴─────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+        0.97 real         0.42 user         0.14 sys
+           149323776  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               10394  page reclaims
+                  27  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                  22  messages sent
+                4296  messages received
+                 740  signals received
+                1261  voluntary context switches
+               11607  involuntary context switches
+          5748365744  instructions retired
+          2189420552  cycles elapsed
+            96011056  peak memory footprint
